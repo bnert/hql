@@ -16,10 +16,10 @@
       [:hero {:id 100}
        [:id :title :friends [:id]]]
 
-      "{hero(id: 100, showFriends: false){id title friends @include(if: showFriends){id name}}}"
-      [:hero {:id 100 :showFriends false}
+      "{hero(id: 100, showFriends: false, showTitle: true){id title @skip(if: !showTitle) friends @include(if: showFriends){id name}}}"
+      [:hero {:id 100 :showFriends false :showTitle true}
        [:id
-        :title
+        :title   [:?skip :!showTitle]
         :friends [:?include :showFriends
                   :id
                   :name]]])))
