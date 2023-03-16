@@ -1,7 +1,10 @@
 ### Overview
 
 This library aims to provide the ability to translate hiccup like data structures
-into graphql strings and queries (if so desired).
+into graphql query strings.
+
+The library is to be as "close to the metal" as can be, in order to provide a
+
 
 **Example**
 ```clojure
@@ -49,9 +52,14 @@ into graphql strings and queries (if so desired).
 ### Roadmap
 - [x] Shorthand query conversion
 - [ ] Longhand query conversion (inferred via variables/structure)
+- [ ] Nested field arguments
 - [x] Mutations conversion
+- [ ] Subscription conversion
 - [x] Basic Directives (i.e. `@include`, `@skip`)
   - [ ] Support for flexible/custom directives
   - [ ] Complex directives
+- [ ] Fragments
+  - [ ] Inline
+  - [ ] Explicit
 - [ ] Pretty formatting (only compact right now)
 
