@@ -25,13 +25,13 @@ around aliases and directives, however, they are a simple mental translation.
         :friends [:id :name]]]))
   ; => { hero { id name friends { id name} } }
 
-  ; With directives (directives are prefixed with "#"
+  ; With directives (directives are prefixed with "#")
   (println
     (hql/h
       [:hero
        {:showName false}
        [:id
-        :name #:include {:if :showName}
+        :name :#include {:if :showName}
         :friends
         [:id
          :name #:skip {:if :showName}]]]))
@@ -102,6 +102,8 @@ around aliases and directives, however, they are a simple mental translation.
   - [x] Explicit
 - [ ] Pretty formatting (only compact right now)
 - [ ] CLJS support
+
+#### Clients
 - [ ] jvm http/websocket client
 - [ ] js http/websocket client
 
