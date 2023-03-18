@@ -34,7 +34,7 @@ around aliases and directives, however, they are a simple mental translation.
         :name :#include {:if :showName}
         :friends
         [:id
-         :name #:skip {:if :showName}]]]))
+         :name :#skip {:if :showName}]]]))
   ; => { hero { id name @include(if: showName) friends { id name @include(if: showName) } } }
 
   ; With Fragments + Aliases (inline/explicit)
