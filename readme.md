@@ -1,12 +1,6 @@
 ### Overview
 
-This library aims to provide the ability to translate hiccup like data structures
-into graphql query strings.
-
-The library is to be as "close to the metal" as can be
-(i.e. not trying to write a DSL around graphql, but a translation latyer).
-There are some some small tweaks
-around aliases and directives, however, they are a simple mental translation.
+This is mainly an educational exercise to tease out a hiccup-like graphql syntax for clojure.
 
 
 **Example**
@@ -100,10 +94,3 @@ around aliases and directives, however, they are a simple mental translation.
 - [x] Fragments
   - [x] Inline
   - [x] Explicit
-- [ ] Pretty formatting (only compact right now)
-- [ ] CLJS support
-
-#### Clients
-- [ ] jvm http/websocket client
-- [ ] js http/websocket client
-
